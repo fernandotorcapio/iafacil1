@@ -1,49 +1,152 @@
 <!DOCTYPE html>
-  <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA Fácil - Automação para TikTok Shop</title>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA Facil - Produtos com IA para TikTok Shop</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
-        header { background: #010101; color: white; padding: 20px 40px; display: flex; align-items: center; gap: 12px; }
-    header h1 { font-size: 1.8rem; }
-    .hero { background: linear-gradient(135deg, #010101, #3a3a3a); color: white; text-align: center; padding: 80px 20px; }
-    .hero h2 { font-size: 2.5rem; margin-bottom: 16px; }
-    .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.85; }
-    .features { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 60px 20px; }
-    .card { background: white; border-radius: 12px; padding: 30px; max-width: 280px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); text-align: center; }
-    .card h3 { margin-bottom: 10px; font-size: 1.2rem; }
-    .card p { color: #666; font-size: 0.95rem; }
-    footer { background: #010101; color: #aaa; text-align: center; padding: 20px; font-size: 0.85rem; }
-        footer a { color: #aaa; margin: 0 10px; }
-        </style>
-      </head>
-      <body>
-        <header>
-          <h1>IA Fácil</h1>
-        </header>
-        <section class="hero">
-          <h2>Automação Inteligente para TikTok Shop</h2>
-          <p>Reposte seus melhores vídeos automaticamente com links de afiliado e maximize suas vendas.</p>
-        </section>
-        <section class="features">
-          <div class="card">
-            <h3>🚀 Reposte Automático</h3>
-      <p>Republique seus vídeos virais com links de afiliado atualizados automaticamente.</p>
-          </div>
-          <div class="card">
-            <h3>📊 Análise de Performance</h3>
-      <p>Identifique seus melhores vídeos e potencialize seu alcance no TikTok.</p>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Inter',Arial,sans-serif;background:#0a0a0a;color:#fff;overflow-x:hidden;}
+    header{background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);padding:16px 24px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(0,200,255,0.2);}
+    .logo-text{font-size:1.6rem;font-weight:900;background:linear-gradient(90deg,#00c8ff,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .hero{background:linear-gradient(135deg,#0a0a0a 0%,#0d1a2e 50%,#1a0d2e 100%);padding:80px 24px 60px;text-align:center;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at center,rgba(0,200,255,0.08) 0%,transparent 60%);animation:pulse 4s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+    .badge{display:inline-block;background:rgba(0,200,255,0.1);border:1px solid rgba(0,200,255,0.4);color:#00c8ff;font-size:0.85rem;font-weight:600;padding:6px 18px;border-radius:50px;margin-bottom:24px;}
+    .hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:20px;position:relative;}
+    .grad{background:linear-gradient(90deg,#00c8ff,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .hero p{font-size:1.15rem;color:rgba(255,255,255,0.75);max-width:600px;margin:0 auto 36px;line-height:1.7;position:relative;}
+    .cta-main{display:inline-block;background:linear-gradient(135deg,#00c8ff,#a855f7);color:#fff;font-size:1.15rem;font-weight:700;padding:20px 48px;border-radius:50px;text-decoration:none;box-shadow:0 0 40px rgba(0,200,255,0.5);animation:glow 2s ease-in-out infinite;transition:transform 0.3s;}
+    @keyframes glow{0%,100%{box-shadow:0 0 30px rgba(0,200,255,0.4)}50%{box-shadow:0 0 70px rgba(0,200,255,0.8)}}
+    .cta-main:hover{transform:translateY(-3px) scale(1.03);}
+    .cta-note{font-size:0.82rem;color:rgba(255,255,255,0.4);margin-top:14px;}
+    .proof{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:44px 24px;background:rgba(255,255,255,0.025);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);}
+    .proof-item{text-align:center;}
+    .proof-num{font-size:2.2rem;font-weight:900;background:linear-gradient(90deg,#00c8ff,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .proof-label{font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:5px;}
+    .sec{padding:72px 24px;max-width:1100px;margin:0 auto;}
+    .sec-title{text-align:center;font-size:clamp(1.6rem,4vw,2.3rem);font-weight:900;margin-bottom:12px;}
+    .sec-sub{text-align:center;color:rgba(255,255,255,0.5);margin-bottom:52px;font-size:1rem;}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;}
+    .card{background:rgba(255,255,255,0.03);border:1px solid rgba(0,200,255,0.15);border-radius:18px;padding:34px 28px;transition:all 0.3s;}
+    .card:hover{border-color:rgba(0,200,255,0.5);transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,200,255,0.1);}
+    .card-icon{font-size:2.4rem;margin-bottom:16px;}
+    .card h3{font-size:1.15rem;font-weight:700;margin-bottom:10px;}
+    .card p{color:rgba(255,255,255,0.6);font-size:0.93rem;line-height:1.65;}
+    .steps-wrap{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:24px;}
+    .step{display:flex;align-items:flex-start;gap:22px;}
+    .step-n{min-width:52px;height:52px;background:linear-gradient(135deg,#00c8ff,#a855f7);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;flex-shrink:0;box-shadow:0 0 20px rgba(0,200,255,0.3);}
+    .step h3{font-size:1.05rem;font-weight:700;margin-bottom:6px;}
+    .step p{color:rgba(255,255,255,0.6);font-size:0.9rem;line-height:1.6;}
+    .testi-sec{background:linear-gradient(180deg,#0a0a0a,#0d1a2e,#0a0a0a);padding:72px 24px;}
+    .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;max-width:1020px;margin:0 auto;}
+    .testi{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:30px;}
+    .stars{color:#fbbf24;margin-bottom:12px;font-size:1rem;}
+    .testi p{color:rgba(255,255,255,0.8);font-size:0.93rem;line-height:1.7;margin-bottom:18px;}
+    .testi-author{display:flex;align-items:center;gap:12px;}
+    .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#00c8ff,#a855f7);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;}
+    .av-name{font-size:0.85rem;font-weight:600;}
+    .av-loc{color:rgba(255,255,255,0.4);font-size:0.75rem;}
+    .cta-sec{background:linear-gradient(135deg,#0d1a2e,#1a0d2e);padding:88px 24px;text-align:center;}
+    .cta-sec h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;margin-bottom:16px;}
+    .cta-sec > p{color:rgba(255,255,255,0.6);max-width:520px;margin:0 auto 40px;line-height:1.7;}
+    .timer{display:flex;justify-content:center;gap:16px;margin-bottom:40px;}
+    .timer-block{text-align:center;}
+    .timer-num{background:rgba(0,200,255,0.08);border:1px solid rgba(0,200,255,0.35);border-radius:12px;padding:14px 20px;font-size:2rem;font-weight:900;color:#00c8ff;min-width:68px;display:block;}
+    .timer-label{font-size:0.68rem;color:rgba(255,255,255,0.4);margin-top:6px;text-transform:uppercase;letter-spacing:1.5px;}
+    .btn-tiktok{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#ff0050,#ee1d52);color:#fff;font-size:1.15rem;font-weight:700;padding:20px 44px;border-radius:50px;text-decoration:none;box-shadow:0 0 40px rgba(255,0,80,0.45);transition:all 0.3s;}
+    .btn-tiktok:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 0 60px rgba(255,0,80,0.65);}
+    .foot{background:#040404;text-align:center;padding:32px 24px;border-top:1px solid rgba(255,255,255,0.05);}
+    .foot p{color:rgba(255,255,255,0.28);font-size:0.8rem;margin-bottom:8px;}
+    .foot a{color:rgba(0,200,255,0.55);text-decoration:none;margin:0 8px;font-size:0.8rem;}
+    .foot a:hover{color:#00c8ff;}
+    .fab{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:999;display:none;white-space:nowrap;}
+    @media(max-width:640px){.fab{display:block;}.hero{padding:60px 20px 48px;}.proof{gap:28px;}.timer-num{font-size:1.5rem;padding:11px 14px;min-width:55px;}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-text">IA Facil</div>
+</header>
+
+<section class="hero">
+  <div class="badge">&#x1F916; Inteligencia Artificial + TikTok Shop</div>
+  <h1>Produtos <span class="grad">Incriveis</span><br>Selecionados pela IA</h1>
+  <p>Descubra os melhores produtos com o poder da Inteligencia Artificial. Curadoria exclusiva direto na TikTok Shop — seguro, rapido e com os melhores precos!</p>
+  <a href="https://vt.tiktok.com/ZS96G1ut4rMjk-KzzqL/" target="_blank" class="cta-main">&#x1F6D2; Ver Produtos na TikTok Shop</a>
+  <p class="cta-note">&#x2705; Gratuito &nbsp;|&nbsp; Sem cadastro &nbsp;|&nbsp; Compra 100% segura</p>
+</section>
+
+<div class="proof">
+  <div class="proof-item"><div class="proof-num">1B+</div><div class="proof-label">Usuarios TikTok</div></div>
+  <div class="proof-item"><div class="proof-num">100%</div><div class="proof-label">Produtos Verificados</div></div>
+  <div class="proof-item"><div class="proof-num">&#x1F916;</div><div class="proof-label">Curadoria com IA</div></div>
+  <div class="proof-item"><div class="proof-num">&#x1F525;</div><div class="proof-label">Ofertas Diarias</div></div>
+</div>
+
+<div class="sec">
+  <h2 class="sec-title">Por que comprar com a <span class="grad">IA Facil?</span></h2>
+  <p class="sec-sub">Nossa IA garante os melhores produtos com o melhor preco — todo dia</p>
+  <div class="grid-3">
+    <div class="card"><div class="card-icon">&#x1F916;</div><h3>Curadoria com IA</h3><p>Nossa IA analisa milhares de produtos e seleciona apenas os melhores, com avaliacoes verificadas e precos imbativeis.</p></div>
+    <div class="card"><div class="card-icon">&#x26A1;</div><h3>Ofertas em Tempo Real</h3><p>Produtos atualizados diariamente com as melhores promocoes da TikTok Shop. Fique por dentro das melhores ofertas!</p></div>
+    <div class="card"><div class="card-icon">&#x1F6E1;&#xFE0F;</div><h3>Compra 100% Segura</h3><p>Todos os produtos sao vendidos diretamente pela TikTok Shop, com protecao ao comprador e garantia oficial.</p></div>
+    <div class="card"><div class="card-icon">&#x1F680;</div><h3>Entrega Rapida</h3><p>Entrega expressa disponivel. Compre hoje e receba em casa com toda a seguranca e praticidade garantidas.</p></div>
+    <div class="card"><div class="card-icon">&#x1F4B0;</div><h3>Melhor Preco Sempre</h3><p>A IA monitora precos continuamente para garantir que voce sempre encontre as melhores ofertas do mercado.</p></div>
+    <div class="card"><div class="card-icon">&#x1F4F1;</div><h3>Simples e Direto</h3><p>Clique, escolha e compre diretamente no TikTok. Processo 100% descomplicado em poucos segundos.</p></div>
+  </div>
+</div>
+
+<div style="background:rgba(255,255,255,0.018);padding:72px 24px;border-top:1px solid rgba(255,255,255,0.06);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2 class="sec-title">Como <span class="grad">Funciona?</span></h2>
+    <p class="sec-sub">Em 3 passos simples voce ja esta comprando</p>
+    <div class="steps-wrap">
+      <div class="step"><div class="step-n">1</div><div><h3>Clique no botao</h3><p>Acesse nossa vitrine na TikTok Shop com todos os produtos selecionados pela inteligencia artificial.</p></div></div>
+      <div class="step"><div class="step-n">2</div><div><h3>Escolha seu produto</h3><p>Navegue pelos produtos curados pela IA e encontre o que voce precisa com o melhor custo-beneficio.</p></div></div>
+      <div class="step"><div class="step-n">3</div><div><h3>Compre com seguranca</h3><p>Finalize sua compra diretamente pela TikTok Shop com protecao total ao comprador e entrega garantida.</p></div></div>
     </div>
-    <div class="card">
-            <h3>👀 TikTok Shop</h3>
-            <p>Integração direta com TikTok Shop para afiliados que querem escalar.</p>
+  </div>
+</div>
+
+<div class="testi-sec">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2 class="sec-title" style="color:#fff;">O que nossos <span class="grad">clientes dizem</span></h2>
+    <p class="sec-sub">Milhares de pessoas ja compraram com a IA Facil</p>
+    <div class="testi-grid">
+      <div class="testi"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Comprei pela vitrine da IA Facil e chegou super rapido! O produto era exatamente o que precisava e ainda paguei mais barato. Super recomendo!"</p><div class="testi-author"><div class="av">AM</div><div><div class="av-name">Ana M.</div><div class="av-loc">Sao Paulo, SP</div></div></div></div>
+      <div class="testi"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"A curadoria da IA realmente funciona! Todos os produtos que comprei tinham otimas avaliacoes e recebi tudo certinho. Experiencia incrivel!"</p><div class="testi-author"><div class="av">RC</div><div><div class="av-name">Roberto C.</div><div class="av-loc">Rio de Janeiro, RJ</div></div></div></div>
+      <div class="testi"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Ja comprei 3 vezes e sempre tive uma otima experiencia! Produtos de qualidade, precos justos e entrega no prazo. Sou fa da IA Facil!"</p><div class="testi-author"><div class="av">JF</div><div><div class="av-name">Julia F.</div><div class="av-loc">Belo Horizonte, MG</div></div></div></div>
     </div>
-  </section>
-        <footer>
-          <p>&copy; 2026 IA Fácil | <a href="/terms.html">Termos de Uso</a> | <a href="/privacy.html">Privacidade</a></p>
-  </footer>
+  </div>
+</div>
+
+<div class="cta-sec">
+  <h2>Aproveite as <span class="grad">Ofertas de Hoje!</span></h2>
+  <p>Os melhores produtos selecionados pela IA estao esperando por voce. Acesse agora a vitrine exclusiva!</p>
+  <div class="timer">
+    <div class="timer-block"><span class="timer-num" id="hh">00</span><span class="timer-label">Horas</span></div>
+    <div class="timer-block"><span class="timer-num" id="mm">00</span><span class="timer-label">Minutos</span></div>
+    <div class="timer-block"><span class="timer-num" id="ss">00</span><span class="timer-label">Segundos</span></div>
+  </div>
+  <a href="https://vt.tiktok.com/ZS96G1ut4rMjk-KzzqL/" target="_blank" class="btn-tiktok">&#x1F3B5; Acessar Vitrine TikTok Shop</a>
+  <p style="margin-top:16px;font-size:0.82rem;color:rgba(255,255,255,0.35);">Gratuito &middot; Sem cadastro &middot; Compra protegida pelo TikTok</p>
+</div>
+
+<footer class="foot">
+  <p>&copy; 2026 IA Facil &mdash; Curadoria Inteligente para TikTok Shop</p>
+  <div><a href="/iafacil1/terms.html">Termos de Uso</a><a href="/iafacil1/privacy.html">Politica de Privacidade</a></div>
+</footer>
+
+<div class="fab">
+  <a href="https://vt.tiktok.com/ZS96G1ut4rMjk-KzzqL/" target="_blank" class="btn-tiktok" style="font-size:0.95rem;padding:14px 28px;">&#x1F6D2; Comprar Agora</a>
+</div>
+
+<script>
+function tick(){var n=new Date(),e=new Date(n);e.setHours(23,59,59,999);var d=e-n,h=Math.floor(d/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);document.getElementById('hh').textContent=('0'+h).slice(-2);document.getElementById('mm').textContent=('0'+m).slice(-2);document.getElementById('ss').textContent=('0'+s).slice(-2);}
+tick();setInterval(tick,1000);
+</script>
 </body>
 </html>
